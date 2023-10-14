@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .doomsday {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(46, 218, 146);
+    border: none;
+    border-radius: 50%; 
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    animation: warnDoomsday 2s infinite;
+    transition: transform 0.3s;
+  }
+  
+  .doomsday:hover {
+    transform: scale(1.1);
+    animation: warnHover 1s infinite;
+  }
+  
+  .doomsday:active {
+    transform: scale(1.2);
+    animation: warnPress 0.5s infinite;
+  }
+  
+  @keyframes warnDoomsday {
+    0% {
+      background-color: rgb(78, 218, 211);
+      transform: scale(1);
+    }
+    50% {
+      background-color: rgb(19, 56, 179);
+      transform: scale(1.05);
+    }
+    100% {
+      background-color: rgb(37, 196, 143);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes warnHover {
+    0% {
+      background-color: rgb(52, 211, 184);
+    }
+    50% {
+      background-color: rgb(18, 85, 173);
+    }
+    100% {
+      background-color: rgb(46, 168, 184);
+    }
+  }
+  
+  @keyframes warnPress {
+    0% {
+      background-color: rgb(25, 113, 185);
+    }
+    50% {
+      background-color: rgb(9, 123, 168);
+    }
+    100% {
+      background-color: rgb(38, 187, 130);
+    }
+  }
